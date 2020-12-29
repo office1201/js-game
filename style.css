@@ -50,6 +50,10 @@ button {
   margin: 5px;
   background-color: tomato;
   color: white;
+  /* 평소에는 보이지 않다가 게임이 시작되면 보이도록,
+  display: none은 랜더 트리에 포함이 되지 않기 때문에 아래 GAME필드
+  사이즈에 영향을 줌. */
+  visibility: hidden;
 }
 
 .game__score {
@@ -62,6 +66,10 @@ button {
   line-height: 100%;
   background-color: tomato;
   color: white;
+  /* 평소에는 보이지 않다가 게임이 시작되면 보이도록,
+  display: none은 랜더 트리에 포함이 되지 않기 때문에 아래 GAME필드
+  사이즈에 영향을 줌. */
+  visibility: hidden;
 }
 
 .game__field {
@@ -69,6 +77,7 @@ button {
   height: 100%;
   background-color: tomato;
   margin-top: 50px;
+  position: relative;
 }
 
 .pop-up {
