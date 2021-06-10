@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr-ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Coordinates</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+      }
+
+      div {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 4px;
+        border-radius: 4px;
+        background-color: slategrey;
+      }
+
+      .special {
+        background-color: snow;
+      }
+
+      aside {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <aside>
+      <button class="scrollBy">Scroll By 100px(y)</button>
+      <button class="scrollTo">Scroll To 100px(y)</button>
+      <button class="scrollInto">Scroll Into Special</button>
+    </aside>
+    <script>
+      const special = document.querySelector(".special");
+      special.addEventListener("click", () => {
+        const rect = special.getBoundingClientRect();
+        console.log(rect);
+      });
+
+      const scrollBy = document.querySelector(".scrollBy");
+      const scrollTo = document.querySelector(".scrollTo");
+      const scrollInto = document.querySelector(".scrollInto");
+
+      scrollBy.addEventListener("click", () => window.scrollBy({ top: 100, left: 0, behavior: "smooth" }));
+      scrollTo.addEventListener("click", () => window.scrollTo({ top: 100, left: 0, behavior: "smooth" }));
+      scrollInto.addEventListener("click", () => {
+        special.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
