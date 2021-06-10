@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr-ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Size</title>
+    <style>
+      .tag {
+        display: inline-block;
+        padding: 4px;
+        background-color: blanchedalmond;
+        border-radius: 4px;
+        color: sienna;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="tag">Window Size</section>
+    <script>
+      const tag = document.querySelector(".tag");
+
+      const innerTag = () => {
+        const { screen, innerWidth, innerHeight, outerWidth, outerHeight } = window;
+        const { clientWidth, clientHeight } = document.documentElement;
+        tag.innerHTML = `
+          Window screen: ${screen.width}, ${screen.height} <br/>
+          Window inner: ${innerWidth}, ${innerHeight} <br/>
+          Window outer: ${outerWidth}, ${outerHeight} <br/>
+          documentElement: ${clientWidth}, ${clientHeight} <br/>`;
+      };
+
+      window.addEventListener("resize", () => innerTag());
+    </script>
+  </body>
+</html>
