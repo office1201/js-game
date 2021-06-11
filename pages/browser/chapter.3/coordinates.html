@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kr-ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinates</title>
+    <style>
+      body {
+        background-color: darkblue;
+      }
+
+      .line {
+        position: absolute;
+        background-color: white;
+      }
+
+      .horizontal {
+        width: 100%;
+        height: 1px;
+        top: 50%;
+      }
+
+      .vertical {
+        width: 1px;
+        height: 100%;
+        left: 50%;
+      }
+
+      .target {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .tag {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 14px;
+        color: white;
+        transform: translate(20px, 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line horizontal"></div>
+    <div class="line vertical"></div>
+    <img class="target" src="../../../img/target.png" alt="타겟 이미지입니다." />
+    <span class="tag"></span>
+    <script>
+      const vertical = document.querySelector(".vertical");
+      const horizontal = document.querySelector(".horizontal");
+      const target = document.querySelector(".target");
+      const tag = document.querySelector(".tag");
+
+      document.addEventListener("mousemove", (event) => {
+        const { clientX, clientY } = event;
+
+        vertical.style.left = `${clientX}px`;
+        horizontal.style.top = `${clientY}px`;
+        target.style.left = `${clientX}px`;
+        target.style.top = `${clientY}px`;
+        tag.style.left = `${clientX}px`;
+        tag.style.top = `${clientY}px`;
+        tag.innerHTML = `${clientX}px, ${clientY}px`;
+      });
+    </script>
+  </body>
+</html>
