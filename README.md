@@ -57,8 +57,8 @@
 - 아이템 추가 및 삭제, 입력값 초기화, 추가 시 스크롤
 
 <div style="display: flex">
-<img width="200" alt="스크린샷 2021-06-15 오후 2 04 57" src="https://user-images.githubusercontent.com/75716128/121996051-ebf5f580-cde2-11eb-8c19-83f3929ef22d.png">
-<img width="200" alt="스크린샷 2021-06-15 오후 2 08 58" src="https://user-images.githubusercontent.com/75716128/121996290-4a22d880-cde3-11eb-8114-c369db81cf69.png">
+<img width="200" height="300" alt="스크린샷 2021-06-15 오후 2 04 57" src="https://user-images.githubusercontent.com/75716128/121996051-ebf5f580-cde2-11eb-8c19-83f3929ef22d.png">
+<img width="200" height="300" alt="스크린샷 2021-06-15 오후 2 08 58" src="https://user-images.githubusercontent.com/75716128/121996290-4a22d880-cde3-11eb-8114-c369db81cf69.png">
 </div>
 
 </br>
